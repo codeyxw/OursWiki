@@ -3,9 +3,9 @@
     <a-menu-item key="0" id="site-logo" disabled>
       <h1>{{ siteInfo.title }}</h1>
     </a-menu-item>
-    <a-menu-item key="1">首页</a-menu-item>
-    <a-menu-item key="2">知识库</a-menu-item>
-    <a-menu-item key="2">我的文章</a-menu-item>
+    <a-menu-item key="1">公共区</a-menu-item>
+    <a-menu-item key="2">团队</a-menu-item>
+    <a-menu-item key="2">个人</a-menu-item>
   </a-menu>
 </template>
 <script setup>

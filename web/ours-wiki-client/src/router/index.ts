@@ -6,6 +6,13 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/',
     component: Layout,
+    redirect:'list',
+    children:[
+      {
+        path: 'list',
+        component: () => import('@/views/List.vue')
+      }
+    ]
   },
 ];
 
