@@ -13,6 +13,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     AAvatar: typeof import('@arco-design/web-vue')['Avatar']
     AButton: typeof import('@arco-design/web-vue')['Button']
+    AInputSearch: typeof import('@arco-design/web-vue')['InputSearch']
     ALayout: typeof import('@arco-design/web-vue')['Layout']
     ALayoutContent: typeof import('@arco-design/web-vue')['LayoutContent']
     ALayoutFooter: typeof import('@arco-design/web-vue')['LayoutFooter']
@@ -23,7 +24,9 @@ declare module 'vue' {
     AListItemMeta: typeof import('@arco-design/web-vue')['ListItemMeta']
     AMenu: typeof import('@arco-design/web-vue')['Menu']
     AMenuItem: typeof import('@arco-design/web-vue')['MenuItem']
+    ASpace: typeof import('@arco-design/web-vue')['Space']
     ASubMenu: typeof import('@arco-design/web-vue')['SubMenu']
+    ATree: typeof import('@arco-design/web-vue')['Tree']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

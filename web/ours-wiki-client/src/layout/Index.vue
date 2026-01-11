@@ -1,33 +1,70 @@
 <template>
-  <a-layout id="site-wrapper">
-    <a-layout-header>
+  <a-layout id="wrapper">
+    <a-layout-header id="header">
       <Header />
     </a-layout-header>
-    <a-layout id="main-content" class="container">
-      <a-layout-sider>
+    <a-layout>
+      <a-layout-sider :collapsible="true" :width="240" hide-trigger :collapsed="collapsedLeft">
+        <div class="filter-box" v-if="!collapsedLeft">
+          <a-space>
+            <a-input-search placeholder="Please enter something" />
+            <a-button type="primary">
+              <template #icon>
+                <icon-plus />
+              </template>
+            </a-button>
+          </a-space>
+        </div>
         <SiderLeft />
+        <a-button shape="circle" id="left-collapse-btn" size="mini" @click="handleCollapseLeft">
+          <icon-right v-if="collapsedLeft" />
+          <icon-left v-else />
+        </a-button>
       </a-layout-sider>
-      <a-layout-content id="main">
+      <a-layout-content>
         <MainContent />
       </a-layout-content>
     </a-layout>
-    <a-layout-footer>
-      <Footer />
-    </a-layout-footer>
   </a-layout>
 </template>
 <script setup>
-import { IconApps, IconBug, IconBulb } from '@arco-design/web-vue/es/icon';
+import {
+  IconApps,
+  IconBug,
+  IconBulb,
+  IconLeft,
+  IconRight,
+  IconPlus,
+} from '@arco-design/web-vue/es/icon';
 import Header from './Header.vue';
-import Footer from './Footer.vue';
 import SiderLeft from './SiderLeft.vue';
 import MainContent from './Main.vue';
+import { ref } from 'vue';
+
+const collapsedLeft = ref(false);
+const handleCollapseLeft = () => {
+  collapsedLeft.value = !collapsedLeft.value;
+};
 </script>
 <style lang="scss" scoped>
-#site-wrapper {
-  min-height: 100vh;
+#wrapper {
+  height: 100vh;
 }
-#main {
-  padding: 16px;
+#header {
+  border-bottom: 1px solid $gray-color2;
+}
+#left-collapse-btn {
+  position: absolute;
+  top: 186px;
+  right: -12px;
+  border: 1px solid $gray-color2;
+  background-color: #fff;
+  box-shadow: 0 4px 10px #0000001a;
+  transition: all 0.15s;
+  z-index: 9;
+}
+.filter-box {
+  height: 50px;
+  padding: 8px;
 }
 </style>

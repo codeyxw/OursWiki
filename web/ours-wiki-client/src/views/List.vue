@@ -1,12 +1,12 @@
 <template>
-    <a-list
+  <a-list
     class="list-demo-action-layout"
     :bordered="false"
     :data="dataSource"
     :pagination-props="paginationProps"
   >
     <template #item="{ item }">
-      <a-list-item class="list-demo-item" action-layout="vertical">
+      <a-list-item class="list-demo-item" action-layout="vertical" @click="handleToDetalis(item)">
         <template #actions>
           <span><icon-heart />83</span>
           <span><icon-star />{{ item.index }}</span>
@@ -30,8 +30,10 @@
 </template>
 <script setup>
 import { reactive } from 'vue';
+import { useRouter } from 'vue-router';
 import { IconHeart, IconStar, IconMessage } from '@arco-design/web-vue/es/icon';
 
+const router = useRouter();
 const dataSource = new Array(3).fill(null).map((_, index) => {
   return {
     index: index,
@@ -49,6 +51,11 @@ const paginationProps = reactive({
   total: 3,
 });
 const names = ['Socrates', 'Balzac', 'Plato'];
+
+const handleToDetalis = (item) => {
+  console.log(item);
+  router.push('/details');
+};
 </script>
 <style scoped lang="scss">
 .list-demo-action-layout .image-area {
