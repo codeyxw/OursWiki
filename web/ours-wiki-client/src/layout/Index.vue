@@ -49,6 +49,7 @@ const handleCollapseLeft = () => {
 <style lang="scss" scoped>
 #wrapper {
   height: 100vh;
+  overflow: hidden;
 }
 #header {
   border-bottom: 1px solid $gray-color2;

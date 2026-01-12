@@ -1,18 +1,7 @@
 <template>
-  <a-tree
-    :data="treeData"
-    id="right-tree"
-    :block-node="true"
-    :style="{ overflow: props.isCollapsed ? 'hidden' : 'auto' }"
-  />
+  <a-tree :data="treeData" id="right-tree" :block-node="true" />
 </template>
 <script setup>
-const props = defineProps({
-  isCollapsed: {
-    type: Boolean,
-    default: false,
-  },
-});
 const treeData = [
   {
     title: 'Trunk 0-0',
@@ -60,6 +49,6 @@ const treeData = [
 <style lang="scss" scoped>
 #right-tree {
   width: 100%;
-  height: calc(100vh - 168px);
+  height: calc(100vh - 178px);
 }
 </style>

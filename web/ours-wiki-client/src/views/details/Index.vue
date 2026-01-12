@@ -10,7 +10,7 @@
       :class="{ 'right-sider-hide': collapsedRight, 'right-sider-show': !collapsedRight }"
     >
       <a-button shape="circle" id="right-collapse-btn-hide" size="large" @click="handleShowRight">
-        <icon-right :isCollapsed="collapsedRight" />
+        <icon-right />
       </a-button>
       <SiderRight />
       <a-button
@@ -57,6 +57,8 @@ const handleShowRight = () => {
 }
 .right-sider-show {
   padding: 0 16px;
+  min-height: 500px;
+  overflow: hidden;
 }
 .right-sider-hide {
   padding: 0;

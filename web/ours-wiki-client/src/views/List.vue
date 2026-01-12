@@ -12,11 +12,11 @@
           <span><icon-star />{{ item.index }}</span>
           <span><icon-message />Reply</span>
         </template>
-        <template #extra>
+        <!-- <template #extra>
           <div class="image-area">
             <img alt="arco-design" :src="item.imageSrc" />
           </div>
-        </template>
+        </template> -->
         <a-list-item-meta :title="item.title" :description="item.description">
           <template #avatar>
             <a-avatar shape="square">
