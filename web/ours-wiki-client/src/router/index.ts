@@ -6,17 +6,28 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/',
     component: Layout,
-    redirect:'list',
-    children:[
+    redirect: 'list',
+    children: [
       {
         path: 'list',
-        component: () => import('@/views/List.vue')
+        component: () => import('@/views/List.vue'),
       },
       {
         path: 'details',
-        component: () => import('@/views/details/Index.vue')
+        component: () => import('@/views/details/Index.vue'),
       },
-    ]
+    ],
+  },
+  {
+    path: '/public',
+    redirect: '/public/list',
+    component: () => import('@/layout/Public.vue'),
+    children: [
+      {
+        path: 'list',
+        component: () => import('@/views/Public.vue'),
+      },
+    ],
   },
 ];
 

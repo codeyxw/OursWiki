@@ -1,6 +1,11 @@
 <template>
   <a-layout id="details-content">
-    <a-layout-content> 详情 </a-layout-content>
+    <a-layout-content class="details-content">
+      <a-breadcrumb>
+        <a-breadcrumb-item>知识库</a-breadcrumb-item>
+        <a-breadcrumb-item>xxxxxx标题</a-breadcrumb-item>
+      </a-breadcrumb>
+    </a-layout-content>
     <a-layout-sider
       :collapsible="true"
       :width="180"
@@ -38,6 +43,9 @@ const handleShowRight = () => {
 <style lang="scss" scoped>
 #details-content {
   height: 100%;
+}
+.details-content {
+  padding: 16px;
 }
 #right-collapse-btn-hide {
   width: 36px;

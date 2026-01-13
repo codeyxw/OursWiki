@@ -1,4 +1,18 @@
 <template>
+  <div class="list-tool">
+    <a-space>
+      <a-button>
+        <template #icon>
+          <icon-plus />
+        </template>
+      </a-button>
+      <a-input-search
+        :style="{ width: '320px' }"
+        placeholder="Please enter something"
+        search-button
+      />
+    </a-space>
+  </div>
   <a-list
     class="list-demo-action-layout"
     :bordered="false"
@@ -31,7 +45,7 @@
 <script setup>
 import { reactive } from 'vue';
 import { useRouter } from 'vue-router';
-import { IconHeart, IconStar, IconMessage } from '@arco-design/web-vue/es/icon';
+import { IconHeart, IconStar, IconMessage, IconPlus } from '@arco-design/web-vue/es/icon';
 
 const router = useRouter();
 const dataSource = new Array(3).fill(null).map((_, index) => {
@@ -76,5 +90,10 @@ const handleToDetalis = (item) => {
 
 .list-demo-action-layout .arco-list-item-action .arco-icon {
   margin: 0 4px;
+}
+.list-tool {
+  padding: 16px;
+  display: flex;
+  justify-content: end;
 }
 </style>
