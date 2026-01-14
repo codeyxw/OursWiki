@@ -1,8 +1,10 @@
 <template>
-  <div class="container">公共区</div>
+  <div class="wrapper">公共区</div>
 </template>
 <style lang="scss" scoped>
-.container {
+.wrapper {
+  height: 500px;
   padding: 16px;
+  background-color: #fff;
 }
 </style>

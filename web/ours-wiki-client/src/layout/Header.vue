@@ -15,7 +15,7 @@
       </ul>
       <a-space>
         <a-button type="primary" v-if="false">登录</a-button>
-        <a-dropdown trigger="hover">
+        <a-dropdown trigger="hover" position="br">
           <a-avatar :style="{ backgroundColor: '#3370ff' }" :size="30">
             <IconUser />
           </a-avatar>
