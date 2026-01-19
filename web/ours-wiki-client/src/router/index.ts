@@ -25,7 +25,7 @@ const routes: RouteRecordRaw[] = [
     children: [
       {
         path: 'list',
-        component: () => import('@/views/Public.vue'),
+        component: () => import('@/views//public/List.vue'),
       },
     ],
   },

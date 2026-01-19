@@ -37,6 +37,7 @@ import { IconUser } from '@arco-design/web-vue/es/icon';
 const route = useRoute();
 const router = useRouter();
 
+console.log(route);
 const currentPath = computed(() => route.path);
 
 const siteInfo = reactive({
@@ -46,7 +47,7 @@ const siteInfo = reactive({
 const menuList = reactive([
   {
     name: '公共区',
-    path: '/public',
+    path: '/public/list',
   },
   {
     name: '知识库',
@@ -63,9 +64,11 @@ const handleChangePage = (path) => {
   display: flex;
   justify-content: space-between;
   padding: 0 16px;
+  background-color: #fff;
+  border-bottom: 1px solid $gray-color2;
   #site-logo {
     margin: 10px 0;
-    width: 180px;
+    width: 160px;
     height: 40px;
     text-indent: -999px;
     background-size: 100% 100%;

@@ -1,6 +1,6 @@
 <template>
-  <a-layout id="wrapper">
-    <a-layout-header id="header">
+  <a-layout class="wrapper">
+    <a-layout-header>
       <Header />
     </a-layout-header>
     <a-layout>
@@ -47,12 +47,9 @@ const handleCollapseLeft = () => {
 };
 </script>
 <style lang="scss" scoped>
-#wrapper {
+.wrapper {
   height: 100vh;
   overflow: hidden;
-}
-#header {
-  border-bottom: 1px solid $gray-color2;
 }
 #left-collapse-btn {
   position: absolute;

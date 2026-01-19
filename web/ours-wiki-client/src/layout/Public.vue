@@ -17,10 +17,11 @@ import Header from './Header.vue';
 <style lang="scss" scoped>
 .pub-box {
   height: 100vh;
+  overflow: hidden;
   background-color: #f2f3f4;
 }
 .container {
-  width: 1000px;
-  margin: 0 auto;
+  width: 1200px;
+  margin: 16px auto 0;
 }
 </style>
